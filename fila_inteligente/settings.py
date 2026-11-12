@@ -130,6 +130,6 @@ MAILERS = {
     },
 }
 
-cors_allowed_origins = [
-    'http://localhost:8080',
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
 ]
