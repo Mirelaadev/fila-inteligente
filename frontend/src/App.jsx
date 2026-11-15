@@ -1,17 +1,18 @@
-import SenhaAtual from "./components/SenhaAtual.jsx";
-import Botoes from "./components/BotoesAtendimento.jsx";
+import Administracao from "./pages/Administracao.jsx";
+import Usuario from "./pages/Usuario.jsx";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  return (
-      <div>
-        <h1>Fila Inteligente</h1>
-        <p>Bem-vindo ao Sistema de Atendimento</p>
+    return (
+        <BrowserRouter>
+            <Routes>
 
-        <SenhaAtual/>
+                <Route path="/" element={<Usuario/>}/>
+                <Route path="/admin" element={<Administracao/>}/>
 
-        <Botoes/>
-      </div>
-  )
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App
