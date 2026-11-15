@@ -1,8 +1,8 @@
-function SenhaAtual() {
+function SenhaAtual(props) {
     return (
         <div>
             <h2>Senha atual</h2>
-            <p>A001</p>
+            <p>{props.senha}</p>
         </div>
     )
 }
