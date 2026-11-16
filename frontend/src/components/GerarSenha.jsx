@@ -15,8 +15,8 @@ function GerarSenha() {
 
     return (
         <div>
-            <button onClick={gerarSenha}>Retirar senha</button>
-            <p>{senha}</p>
+            <button className="botao" onClick={gerarSenha}>Retirar senha</button>
+            <p className="senha">{senha}</p>
         </div>
     )
 }
