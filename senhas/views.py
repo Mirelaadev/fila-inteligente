@@ -55,7 +55,7 @@ def listar_senhas_chamadas(request):
 
 @api_view(['PUT'])
 def concluir_senha(request):
-    senha = Senha.objects.filter(status='chamada').order_by('data_criacao').first()
+    senha = Senha.objects.filter(senha=request.data['senha'], status='chamada').first()
 
     if senha is None:
         return Response({
