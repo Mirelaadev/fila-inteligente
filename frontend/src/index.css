@@ -118,3 +118,46 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
+..painel {
+    min-height: 100vh;
+    background-color: #f4f6f8;
+}
+
+.cabecalho-painel {
+    background-color: #222;
+    color: white;
+    padding: 25px 40px;
+}
+
+.cabecalho-painel h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.conteudo-painel {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.painel .senha-atual {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.painel .senha-atual p {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.chamadas-painel {
+    margin-top: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
