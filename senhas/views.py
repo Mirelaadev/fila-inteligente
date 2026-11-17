@@ -77,6 +77,20 @@ def listar(request):
 
     return Response(serializer.data)
 
+@api_view(['GET'])
+def senha_atual(request):
+    senha = Senha.objects.filter(status='chamada').last()
+
+    if senha is None:
+        return Response({
+            'mensagem': 'Não há senhas chamadas'
+        })
+
+    return Response({
+        'senha': senha.senha,
+        'status': senha.status
+    })
+
 
 
 

@@ -5,7 +5,9 @@ from senhas.views import (
     chamar_senha,
     listar_senhas_pendentes,
     concluir_senha,
-    listar, listar_senhas_chamadas
+    listar,
+    listar_senhas_chamadas,
+    senha_atual
 )
 urlpatterns = [
     path('api/senhas/criar', criar_senha, name='criar_senha'),
@@ -13,6 +15,7 @@ urlpatterns = [
     path('api/senhas/pendentes', listar_senhas_pendentes, name='listar_senhas_pendentes'),
     path('api/senhas/chamadas', listar_senhas_chamadas, name='listar_senhas_chamadas'),
     path('api/senhas/concluir', concluir_senha, name='concluir_senha'),
+    path('api/senhas/atual', senha_atual, name='senha_atual'),
     path('api/senhas/listar', listar, name='listar'),
 
 ]
