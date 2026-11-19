@@ -48,7 +48,14 @@ def listar_senhas_pendentes(request):
 
 @api_view(['GET'])
 def listar_senhas_chamadas(request):
-    senhas = Senha.objects.filter(status = 'chamada')
+    senhas = Senha.objects.filter(status = 'chamada').order_by('-data_criacao')
+    serializer = SenhaSerializer(senhas, many=True)
+
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def listar_ultimas_chamadas(request):
+    senhas = Senha.objects.filter(status = 'chamada').order_by('-data_criacao')[:5]
     serializer = SenhaSerializer(senhas, many=True)
 
     return Response(serializer.data)
