@@ -6,10 +6,7 @@ function SenhasChamadas(props) {
 
     useEffect(() => {
         async function buscarSenhas() {
-            const resposta = await fetch('http://127.0.0.1:8000/api/senhas/chamadas',{
-                    method: 'GET'
-                }
-            )
+            const resposta = await fetch(props.url)
 
             const dados = await resposta.json()
 
@@ -23,8 +20,6 @@ function SenhasChamadas(props) {
 
     return (
         <div className="lista-senhas">
-            <p>Senhas chamadas</p>
-
             {senhas.map((senha) =>(
                 <p className="item-senha"
                    onClick={() => props.setSenhaSelecionada(senha.senha)}>
