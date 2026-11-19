@@ -30,6 +30,7 @@ function Administracao() {
               <div className="listas-senhas">
                     <SenhasPendentes  atualizar={atualizar}/>
                     <SenhasChamadas
+                        url="http://127.0.0.1:8000/api/senhas/chamadas"
                         setSenhaSelecionada={setSenhaSelecionada}
                         atualizar={atualizar}
                     />

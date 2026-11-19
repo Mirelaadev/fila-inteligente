@@ -27,7 +27,9 @@ function Painel() {
 
             <div className="chamadas-painel">
                 <h2>Senhas chamadas</h2>
-                 <SenhasChamadas/>
+                 <SenhasChamadas
+                    url="http://127.0.0.1:8000/api/senhas/ultimas/chamadas"
+                 />
             </div>
         </div>
         )
