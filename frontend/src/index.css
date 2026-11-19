@@ -118,7 +118,7 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-..painel {
+.painel {
     min-height: 100vh;
     background-color: #f4f6f8;
 }
